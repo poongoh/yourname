@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>君の名は。</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!-- CONTENT STARTS HERE -->
+
+<body>
+  <!-- BANNER -->
+  <div class="banner">
+    <img class="banner_img" src="assets/img/banner.png" />
+    <!-- <p class="ver">Mitsuha 4.3.14</p> -->
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="intro-text">
+      <p id="intro-top">
+        Hi! I'm Mitsuha, an AI-powered machine programmed to <strong>guess a person's nationality</strong> based on
+        their name.
+      </p><br>
+      <p>
+        Although my Python source code is just <strong>7 lines
+          long</strong>, my predictions are fairly accurate
+        (<strong>98.4%</strong> or above). Currently, I can recognize only
+        <strong>Korean</strong>, <strong>Japanese</strong>, and
+        <strong>Chinese</strong> names, but will be upgraded to support more
+        languages.
+      </p>
+    </div>
+    <div class="intro-img">
+      <img class="mitsuha" src="assets/img/mitsuha.png" />
+    </div>
+  </div>
+
+  <!-- <hr> -->
+
+  <!-- HOW TO -->
+  <div class="howto">
+
+    <hr>
+    <p>Please enter a name and let me guess where the person came from.</p>
+    <p style="font-size: 13px"><i>NOTE</i>:</p>
+    <p id="eng">(1) English alphabets and spaces only (e.g., <i>Hong Gil Dong</i>)</p>
+    <p id="len">(2) Five or more letters </p>
+  </div>
+
+  <!-- MACHINE -->
+  <div class="machine">
+    <input id="enteredName" type="text" placeholder="Enter a Name Here" disabled autocomplete="off">
+    <button id="submitBtn" disabled>SUBMIT</button>
+  </div>
+
+  <!-- RESULT -->
+  <div class="result">
+    <p id="msg">&nbsp;</p>
+    <button id="againBtn" disabled>RESTART</button>
+  </div>
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Poong Oh. Mitsuha 4.3.14</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

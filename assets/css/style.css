@@ -1,0 +1,216 @@
+* body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  position: relative;
+  max-width: 370px;
+  margin: 0 auto 0 auto;
+}
+
+.banner_img {
+  width: 100%;
+  /* display: block; */
+}
+
+.intro {
+  position: relative;
+  max-width: 370px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.intro-text {
+  width: 100%;
+  border: 1px solid #585858;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  background-color: #f8f9fa;
+}
+
+.intro-text p {
+  margin: 0;
+}
+
+#intro-top {
+  padding-right: 25%;
+}
+
+.intro-img {
+  position: absolute;
+  top: -20px;
+  right: -12px;
+  width: 33%;
+  max-width: 100px;
+  margin: 0;
+}
+
+.mitsuha {
+  width: 100%;
+  filter: drop-shadow(0 0 20px rgba(82, 82, 82, 0.5));
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  max-width: 370px;
+  width: 100%;
+}
+
+.howto {
+  max-width: 370px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.howto p {
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+
+#eng,
+#len {
+  font-size: .7rem;
+  margin: 0 0 0 0;
+  padding-left: 10px;
+}
+
+.machine,
+.result {
+  max-width: 370px;
+  width: 100%;
+  height: 30px;
+  margin: 3px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.machine {
+  margin-top: 15px !important;
+}
+
+input {
+  width: 75%;
+  margin-right: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.result p {
+  width: 75%;
+  margin: 0;
+  padding-left: 5px;
+  justify-content: left;
+}
+
+#submitBtn {
+  width: 25%;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+#againBtn {
+  width: 25%;
+  font-size: .8rem;
+  ;
+  margin: 0;
+  font-weight: 800;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #666666;
+  margin-top: 0.1vh;
+}
+
+footer p {
+  margin: 0;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+/* 2. 비활성화가 아닐 동안 (not disabled) 글루 효과 애니메이션 무한 반복 */
+input[type="text"]:not(:disabled) {
+  animation: glowPulse 1s infinite ease-in-out;
+  background-color: #fff;
+}
+
+/* 3. 마우스 호버 시 (애니메이션 덮어쓰기 및 은은한 반응) */
+input[type="text"]:not(:disabled):hover {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+}
+
+/* 4. 포커스(클릭) 시 (애니메이션 멈추고 또렷하게 유지) */
+input[type="text"]:focus {
+  outline: none;
+  animation: none; /* 클릭해서 작성 중일 때는 반짝임을 멈춤 */
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* 5. 반짝이는 글로우 효과 키프레임 */
+@keyframes glowPulse {
+  0% {
+    border-color: #ccc;
+    box-shadow: 0 0 0px rgba(0, 123, 255, 0);
+  }
+  50% {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  }
+  100% {
+    border-color: #ccc;
+    box-shadow: 0 0 0px rgba(0, 123, 255, 0);
+  }
+}
+
+#submitBtn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #aaa;
+}
+
+#submitBtn:not(:disabled) {
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#submitBtn:not(:disabled):hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+#againBtn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #aaa;
+}
+
+/* 활성화 상태 (기본 짙은 녹색) */
+#againBtn:not(:disabled) {
+  color: #fff;
+  background-color: #198754; /* 짙은 차분한 녹색 (Bootstrap Green) */
+  border-color: #198754;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* 활성화 상태에서 마우스 호버 (더 짙은 녹색) */
+#againBtn:not(:disabled):hover {
+  background-color: #146c43; /* 호버 시 한 톤 더 어두운 녹색 */
+  border-color: #13653f;
+}
